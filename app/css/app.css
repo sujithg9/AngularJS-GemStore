@@ -46,6 +46,15 @@ image-gallery{
    transform: scale(1.2);
   }
 
+  .form-control.ng-valid.ng-dirty{
+    border-color:#78FA89;
+  }
+  .form-control.ng-invalid.ng-dirty{
+    border-color:#FA787E;
+  }
+
+
+
 /*----------Responsive Classes------------*/
 @media (max-width: 767px) {
   .gemWrapper {

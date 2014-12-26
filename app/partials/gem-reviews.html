@@ -10,7 +10,7 @@
     </ul>
 
     <!--  Review Form -->
-    <form name="reviewForm" data-ng-controller="ReviewController" data-ng-submit="addReview(gem)">
+    <form name="reviewForm" data-ng-controller="ReviewController" data-ng-submit="reviewForm.$valid && addReview(gem)" novalidate>
         <!--  Live Preview -->
         <blockquote >
         <strong>{{review.stars}} Stars</strong>
@@ -21,15 +21,15 @@
         <!--  Review Form -->
         <h4>Submit a Review</h4>
         <fieldset class="form-group">
-        <select ng-model="review.stars" class="form-control" data-ng-options="stars for stars in [5,4,3,2,1]" title="Stars">
+        <select ng-model="review.stars" class="form-control" data-ng-options="stars for stars in [5,4,3,2,1]" title="Stars" required>
             <option value>Rate the Product</option>
         </select>
         </fieldset>
         <fieldset class="form-group">
-        <textarea ng-model="review.body" class="form-control" placeholder="Write a short review of the product..." title="Review"></textarea>
+        <textarea ng-model="review.body" class="form-control" placeholder="Write a short review of the product..." title="Review" required></textarea>
         </fieldset>
         <fieldset class="form-group">
-        <input ng-model="review.author" type="email" class="form-control" placeholder="sample@example.com" title="Email" />
+        <input ng-model="review.author" name="email" type="email" class="form-control" placeholder="sample@example.com" title="Email" required/>
         </fieldset>
         <fieldset class="form-group">
         <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
