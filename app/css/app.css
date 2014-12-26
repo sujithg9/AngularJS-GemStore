@@ -1,0 +1,85 @@
+﻿/* app css stylesheet */
+
+body {
+    background-color: #F9F9F9 !important;
+}
+
+.gemWrapper {
+   border: 2px solid #a1a1a1;
+    background: #dddddd;
+    border-radius: 25px; 
+}
+
+img.center-block{
+ border-radius: 25px; 
+}
+
+image-gallery{
+  padding-top:3px;
+  padding-bottom:3px;
+}
+
+#smallImageGallery{
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+.show-hide {
+    transition: ease-out 2s;
+}
+
+.img-thumbnail{
+   opacity: .9;
+   -webkit-transition: all 0.3s ease-out;
+   -moz-transition: all 0.3s ease-out;
+   -o-transition: all 0.3s ease-out;
+   transition: all 0.3s ease-out;
+}
+
+.img-thumbnail:hover{
+   background: #FDF6E3;
+   z-index:1;
+   opacity: 1;
+   -webkit-transform: scale(1);
+   -moz-transform: scale(1.2);
+   -ms-transform: scale(1.2);
+   transform: scale(1.2);
+  }
+
+/*----------Responsive Classes------------*/
+@media (max-width: 767px) {
+  .gemWrapper {
+    width: 100%;
+  }
+
+    .small-image {
+        max-height:40px;
+    }
+}
+@media (min-width: 768px) {
+  .gemWrapper {
+    width: 100%;
+  }
+
+    .small-image {
+        max-height:40px;
+    }
+}
+@media (min-width: 992px) {
+  .gemWrapper {
+    width: 85%;
+  }
+
+    .small-image {
+        max-height: 50px;
+    }
+}
+@media (min-width: 1200px) {
+  .gemWrapper {
+    width: 70%;
+  }
+
+    .small-image {
+        max-height: 60px;
+    }
+}

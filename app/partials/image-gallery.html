@@ -1,0 +1,6 @@
+<!----------image gallery---------------->
+<img class="img-responsive center-block" data-ng-src="{{gem.images[0]}}" />
+
+<div id="smallImageGallery" class="text-center">                
+	<img data-ng-repeat="image in gem.images" data-ng-src="{{image}}" class="small-image img-thumbnail" />               
+</div>
